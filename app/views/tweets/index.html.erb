@@ -5,7 +5,7 @@
   <% @tweets.each do |tweet| %>
     <tr>
       <td><%= tweet.description %></td>
-      <td><%= tweet.user.email %></td>
+      <td><%= link_to tweet.user.email, user_path(tweet.user) %></td>
       <td><%= tweet.created_at.strftime('%d %B %Y') %></td>
       <td>
         <% if tweet.user == current_user %>

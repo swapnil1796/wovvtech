@@ -1,5 +1,6 @@
 Rails.application.routes.draw do
+  root to: 'tweets#index'
   devise_for :users
   resources :tweets, except: %i[edit update]
-  root to: 'welcome#show'
+  resources :users, only: :show
 end
