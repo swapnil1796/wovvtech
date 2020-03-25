@@ -3,4 +3,5 @@ Rails.application.routes.draw do
   devise_for :users
   resources :tweets, except: %i[edit update]
   resources :users, only: :show
+  resources :followers, only: %i[new create destroy]
 end
