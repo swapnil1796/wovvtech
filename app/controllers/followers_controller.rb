@@ -6,7 +6,7 @@ class FollowersController < ApplicationController
   end
 
   def destroy
-    follower = Follower.find(id)
+    follower = Follower.find_by(user_id: params[:id])
     follower.destroy
   end
 
