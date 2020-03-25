@@ -1,0 +1,7 @@
+<h3><%= @tweet.description %></h3>
+<h5><%= @tweet.user.email %></h5>
+<h5><%= @tweet.created_at.strftime('%d %B %Y') %></h5>
+<h5><%= link_to 'Delete', tweet_path(@tweet), method: :delete %></h5>
+
+<%= link_to 'New', new_tweet_path %>
+<%= link_to 'Back', tweets_path %>

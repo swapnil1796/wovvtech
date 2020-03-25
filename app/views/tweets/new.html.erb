@@ -1,0 +1,12 @@
+<% if @tweet.errors.present? %>
+  <% @tweet.errors.full_messages.each do |error| %>
+    <ul>
+      <li><%= error %></li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= form_for @tweet do |f| %>
+  <%= f.text_area :description, cols: 40, rows: 20 %>
+  <%= f.submit %>
+<% end %>
